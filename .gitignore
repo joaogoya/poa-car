@@ -1,0 +1,37 @@
+# WordPress .gitignore (wp-content)
+
+# Pastas do Core a ignorar
+languages/
+upgrade/
+upgrade-temp-backup/
+
+# --- Temas ---
+# Ignorar todos os temas, exceto o pipeline
+themes/*
+!themes/pipeline/
+
+# Dentro do tema pipeline, ignorar dependências de build
+themes/pipeline/node_modules/
+themes/pipeline/.sass-cache/
+
+# Como você quer subir, NÃO colocamos nada de 'plugins/' ou 'uploads/' aqui.
+
+# --- Arquivos de Sistema e IDE ---
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# --- Temporários e Backups ---
+cache/
+temp/
+vendor/
+*.bak
+*.tmp
+*.swp
+*.sql
+
+# --- Outros ---
+.env
