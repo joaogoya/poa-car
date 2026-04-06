@@ -1,0 +1,82 @@
+/* --- Seção Venha Nos Visitar (NAP + Mapa) --- */
+.section-agendamento-red {
+    background: linear-gradient(135deg, #fd0000 0%, #a00000 100%);
+    position: relative;
+}
+
+.text-dark-red-title {
+    color: #4a0000;
+}
+
+.divider-white {
+    width: 80px;
+    height: 4px;
+    background-color: #fff;
+    margin: 15px auto;
+}
+
+/* Container do Mapa */
+.map-wrapper {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.map-wrapper iframe {
+    filter: grayscale(0.2) contrast(1.1);
+}
+
+/* Card NAP - PADRONIZADO COM OS SERVIÇOS */
+.nap-card-premium {
+    /* Mesmo fundo translúcido dos cards de serviço */
+    background: rgb(222 98 98 / 75%);
+    backdrop-filter: blur(10px);
+    
+    /* Borda lateral padrão POA Car Service */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-left: 8px solid #fff; 
+    
+    border-radius: 0px;
+}
+
+/* Texto Branco 80% (Padrão de legibilidade) */
+.text-white-80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Botão WhatsApp Reutilizando a classe da section anterior */
+/* Se a classe .btn-whatsapp-section já existir no seu CSS, não precisa duplicar */
+.btn-whatsapp-section {
+    background-color: #fff;
+    color: #fd0000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-whatsapp-section:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 991px) {
+    .nap-card-premium {
+        border-left: 0;
+        border-top: 8px solid #fff; /* No mobile a borda fica no topo separando do mapa */
+        padding: 2rem !important;
+    }
+    
+    .map-wrapper iframe {
+        min-height: 300px !important;
+    }
+}

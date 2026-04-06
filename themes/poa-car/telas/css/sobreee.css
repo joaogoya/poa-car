@@ -1,0 +1,113 @@
+/* ==========================================================================
+   SECTION SOBRE - POA CAR SERVICE
+   ========================================================================== */
+
+/* Container de empilhamento das imagens */
+.image-stack {
+    position: relative;
+    height: 500px; /* Altura controlada para o efeito de sobreposição */
+    width: 100%;
+}
+
+/* Imagem de Fundo (Retângulo) */
+.img-bg {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.img-bg img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+}
+
+/* Imagem da Frente (Quadrado/Offset) */
+.img-fg {
+    width: 55%;
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    z-index: 2; /* Fica por cima */
+}
+
+.img-fg img {
+    border: 8px solid #fff; /* Moldura branca para destacar da imagem de fundo */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Tipografia e Títulos */
+.title-impact {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* Lista Customizada com Dots Vermelhos */
+.custom-list {
+    padding-left: 0;
+}
+
+.custom-list li {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.custom-list li i {
+    color: #fd0000; /* Vermelho POA */
+    font-size: 8px; /* Dot pequeno e elegante */
+}
+
+/* Bloco de Citação */
+.quote-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #fd0000 !important;
+}
+
+.quote-box p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   AJUSTES RESPONSIVOS (MOBILE)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .image-stack {
+        height: 380px; /* Reduz altura para não sobrar espaço em branco no mobile */
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .img-bg {
+        width: 80%;
+    }
+
+    .img-bg img {
+        height: 320px;
+    }
+
+    .img-fg {
+        width: 60%;
+    }
+
+    .title-impact {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    /* Ajuste de respiro para o texto que agora vem após as fotos */
+    .ps-lg-5 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}

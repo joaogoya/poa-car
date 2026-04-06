@@ -1,0 +1,24 @@
+/* --- Atualizações Globais e Variáveis --- */
+:root {
+    --primary-red: #fd0000;
+    --dark-red: #cc0000; /* Vermelho um pouco mais escuro para o hover */
+    --light-gray: #e2e4e3;
+    --black-bg: #0a0a0a;
+}
+
+/* Aplicando as novas fontes */
+h1, h2, h3, .btn-hero {
+    font-family: 'Oswald', sans-serif;
+}
+
+body, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-red { color: var(--primary-red); }
+
+
+/* Animação suave para o scroll */
+html {
+    scroll-behavior: smooth;
+}

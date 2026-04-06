@@ -1,0 +1,69 @@
+/* --- Ajuste Image Stack (Sobre) --- */
+.image-stack-custom {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* Foto Retangular (Rafael e Rafaela) - Esquerda e ao Fundo */
+.img-portrait {
+  width: 75%; 
+  position: absolute;
+  top: 0;
+  left: 0; /* Alinhada à ESQUERDA */
+  z-index: 1;
+}
+
+.img-portrait img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 15px 15px 50px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+/* Foto Quadrada (OAM) - Direita e à Frente */
+.img-square-overlap {
+    width: 39%;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    z-index: 2;
+}
+
+.img-square-overlap img {
+  aspect-ratio: 1 / 1;
+  border: 10px solid #fff; /* Borda branca grossa para destacar do fundo */
+  box-shadow: -10px 15px 30px rgba(0,0,0,0.2);
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Tipografia e Listas */
+.custom-list li {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 991px) {
+  .image-stack-custom {
+    height: 420px;
+    margin-bottom: 40px;
+  }
+  .img-portrait {
+    width: 80%;
+    left: 0;
+  }
+  .img-portrait img {
+    height: 380px;
+  }
+  .img-square-overlap {
+    width: 55%;
+    right: 0;
+    bottom: 0;
+  }
+}

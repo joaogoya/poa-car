@@ -1,0 +1,35 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Onitir IT solution template
+    Note: Main Style Scss - Globalized Version
+-----------------------------------------------------------------------------------*/
+
+// 1. CARGA GLOBAL (O pulo do gato)
+// Usamos @forward para que 'variables' e 'mixin' fiquem disponíveis 
+// para qualquer um que der @use neste arquivo mestre.
+@forward 'variables';
+@forward 'mixin';
+
+// 2. IMPORTAÇÃO DOS COMPONENTES
+// Aqui usamos @use 'as *' para carregar os estilos na ordem da cascata CSS
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'common' as *;
+@use 'header' as *;
+@use 'banner' as *;
+@use 'about' as *;
+@use 'services' as *;
+@use 'cta' as *;
+@use 'features' as *;
+@use 'video' as *;
+@use 'team' as *;
+@use 'skill' as *;
+@use 'portfolio' as *;
+@use 'testimonial' as *;
+@use 'blog' as *;
+@use 'contact' as *;
+@use 'framework' as *;
+@use 'counter' as *;
+@use 'breadcrumb' as *;
+@use 'sidebar' as *;
+@use 'faq' as *;
+@use 'footer' as *;

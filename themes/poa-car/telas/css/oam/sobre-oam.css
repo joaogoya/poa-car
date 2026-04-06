@@ -1,0 +1,29 @@
+/* Ajuste na narrativa para não ficar cansativo */
+.narrativa-copy p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* Destaque para a citação de fechamento */
+.cta-jornada-box {
+    background-color: #f8f9fa; /* Um cinza bem clarinho para destacar o bloco */
+    padding: 1.5rem;
+}
+
+.cta-jornada-box p {
+    font-size: 1.1rem;
+}
+
+/* Ajuste fino na fonte Oswald para não ficar "esmagada" */
+.title-impact {
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+/* Respiro extra para dispositivos móveis */
+@media (max-width: 991px) {
+    .cta-jornada-box {
+        margin-top: 2rem;
+    }
+}

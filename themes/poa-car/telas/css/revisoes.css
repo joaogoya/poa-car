@@ -1,0 +1,40 @@
+/* --- Seção de Revisões Programadas --- */
+.plan-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0 !important; /* Mantendo o estilo agressivo da POA */
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.featured-plan {
+    border: 2px solid var(--primary-red) !important;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+/* Lista de itens com check */
+.custom-list-check li {
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.custom-list-check li:last-child {
+    border-bottom: none;
+}
+
+.custom-list-check li strong {
+    color: var(--black-bg);
+}
+
+/* Ajuste mobile para o card em destaque não quebrar o layout */
+@media (max-width: 991px) {
+    .featured-plan {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+}

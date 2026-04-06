@@ -1,0 +1,52 @@
+/* ==========================================================================
+   SECTION OAM - OFICINA AMIGA DA MULHER
+   ========================================================================== */
+
+#certificacao-oam {
+    background-color: #fcfcfc !important; /* Um branco levemente "off" para descansar a vista */
+}
+
+.oam-logo-main {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.oam-logo-main:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.border-red {
+    border-color: var(--primary-red) !important;
+}
+
+/* Ajuste nos botões para essa seção ser mais amigável */
+#certificacao-oam .btn-dark {
+    background-color: #1a1a1a;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+#certificacao-oam .btn-dark:hover {
+    background-color: var(--primary-red);
+    transform: translateY(-3px);
+}
+
+#certificacao-oam .btn-outline-danger {
+    border-radius: 0;
+    border-width: 2px;
+}
+
+/* Estilo para os mini-cards de diferenciais */
+#certificacao-oam .bg-white {
+    transition: all 0.3s ease;
+}
+
+#certificacao-oam .bg-white:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 991px) {
+    #certificacao-oam .title-impact {
+        font-size: 2rem;
+    }
+}
