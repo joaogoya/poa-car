@@ -32,8 +32,7 @@ scripts: {
       'assets/js/vendor/modernizr*.js',
 
       // 2. DEPENDÊNCIAS: Popper e Bootstrap
-      'assets/js/popper*.js',
-      'assets/js/bootstrap*.js',
+      'assets/js/bootstrap.bundle.min.js', // O bundle já inclui o Popper.js
 
       // 3. PLUGINS: Todos os plugins do template
       'assets/js/slick*.js',
@@ -58,14 +57,14 @@ scripts: {
 function buildCss() {
   // O Gulp vai ler todos os arquivos da lista na ordem
   return gulp.src([...paths.styles.vendors, ...paths.styles.src])
-    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init({ loadMaps: true })) // Inicializa carregando mapas existentes
     .pipe(sass({
         quietDeps: true // Silencia avisos de @import se houver algum nos vendors
     }).on('error', sass.logError))
     .pipe(concat('style.min.css')) // Concatena DEPOIS de compilar (CSS com CSS)
     .pipe(postcss([autoprefixer()]))
-    .pipe(cleanCSS({ level: 2, compatibility: 'ie8' }))
-    .pipe(sourcemaps.write('./'))
+    .pipe(cleanCSS({ level: 1 })) // Nível 1 é mais seguro para não quebrar o mapeamento de linhas
+    .pipe(sourcemaps.write('./')) // Escreve o arquivo .map na mesma pasta do CSS
     .pipe(gulp.dest(paths.styles.dest));
 }
 
