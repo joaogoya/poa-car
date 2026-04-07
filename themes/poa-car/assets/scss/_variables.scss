@@ -1,43 +1,21 @@
-// Font Family
-$oswald: 'Oswald', sans-serif;
-$roboto: 'Roboto', sans-serif;
+// ==========================================================================
+// VARIÁVEIS GLOBAIS - POA CAR SERVICE
+// ==========================================================================
 
-// Colors ---------------
-$text-color: #041d38;
-$primary-color: #ffaa17;
-$secondary-color: #041d38;
-$overly-color: #757a89;
-$third-color: #091620;
-$fourth-color: #14212b;
-$section-bg: #f7fcff;
-$white: #fff;
-$black: #000;
+// 1. Cores
+$primary-red: #fd0000;
+$dark-red:    #cc0000;
+$light-gray:  #e2e4e3;
+$black-bg:    #0a0a0a;
 
-$border-color: #ededed;
+// 2. Tipografia
+$font-main:    'Roboto', sans-serif;
+$font-heading: 'Oswald', sans-serif;
 
-// Responsive Variables
-$xxl: '(min-width: 1600px)';
-$xl: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
-$lg: 'only screen and (min-width: 992px) and (max-width: 1200px)';
-$md: 'only screen and (min-width: 768px) and (max-width: 991px)';
-$sm: '(max-width: 767px)';
-$lsm: 'only screen and (min-width: 576px) and (max-width: 767px)';
-$xsm: '(max-width: 575px)';
-$tiny: '(max-width: 399px)';
-
-
-// Margins e paddings--
-$directions: (
-  "t": "top",
-  "b": "bottom",
-  "l": "left",
-  "r": "right"
-);
-
-@for $i from 0 through 40 { // De 0 até 200px (40 * 5)
-    $val: $i * 5;
-    @each $char, $dir in $directions {
-        .m#{$char}-#{$val} { margin-#{$dir}: #{$val}px !important; }
-        .p#{$char}-#{$val} { padding-#{$dir}: #{$val}px !important; }
-    }
+// 3. Compatibilidade (Mapeia SASS para CSS Variables)
+:root {
+    --primary-red: #{$primary-red};
+    --dark-red:    #{$dark-red};
+    --light-gray:  #{$light-gray};
+    --black-bg:    #{$black-bg};
 }

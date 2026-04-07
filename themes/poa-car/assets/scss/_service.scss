@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+/* ==========================================================================
+   SECTION SERVIÇOS - POA CAR SERVICE
+   ========================================================================== */
+
+.section-services-red {
+    background: linear-gradient(135deg, $primary-red 0%, darken($primary-red, 15%) 100%);
+    position: relative;
+    overflow: hidden;
+
+    .divider-white {
+        width: 80px;
+        height: 4px;
+        background-color: #fff;
+        margin: 15px auto;
+    }
+
+    /* Card Premium - Estilo Translúcido */
+    .service-card-premium {
+        background: rgba(222, 98, 98, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-left: 6px solid #fff;
+        height: 100%;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 0px;
+
+        h4 {
+            font-family: $font-heading;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .icon-box-service {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    @media (max-width: 991px) {
+        padding: 60px 0;
+        .title-impact { font-size: 2.2rem; }
+    }
+}
+
+/* Utilitários e Componentes Globais */
+.text-white-80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.btn-whatsapp-section {
+    background-color: #fff;
+    color: $primary-red;
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    padding: 18px 40px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: $black-bg;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+}

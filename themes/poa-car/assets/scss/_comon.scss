@@ -1,0 +1,75 @@
+// Importa as definições globais
+@use 'variables' as *;
+
+/* --- Configurações de Base --- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, p {
+    font-family: $font-main;
+    color: $black-bg;
+}
+
+/* Tipografia de Impacto */
+h1, h2, h3, .btn-hero {
+    font-family: $font-heading;
+    text-transform: uppercase;
+}
+
+.text-red { color: $primary-red; }
+
+/* --- Preloader --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black-bg;
+    z-index: 999999; // Fica por cima de tudo
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba($primary-red, 0.2);
+        border-top-color: $primary-red;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- Preloader --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black-bg;
+    z-index: 999999; // Acima de tudo
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba($primary-red, 0.2);
+        border-top-color: $primary-red;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

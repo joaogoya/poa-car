@@ -80,27 +80,27 @@ function get_custom_menu($id)
 /************************ ASSETS ***********************/
 /*******************************************************/
 
-// function pipe_add_scripts() {
-//     // 1. Desativa o jQuery nativo do WordPress para evitar duplicidade e conflitos
-//     if (!is_admin()) {
-//         wp_deregister_script('jquery');
-//         wp_deregister_script('jquery-migrate');
-//     }
+function pipe_add_scripts() {
+    // 1. Desativa o jQuery nativo do WordPress para evitar duplicidade e conflitos
+    if (!is_admin()) {
+        wp_deregister_script('jquery');
+        wp_deregister_script('jquery-migrate');
+    }
 
-//     $dist_path = get_stylesheet_directory_uri() . '/assets/dist';
-//     $dist_dir  = get_stylesheet_directory() . '/assets/dist';
+    $dist_path = get_stylesheet_directory_uri() . '/assets/dist';
+    $dist_dir  = get_stylesheet_directory() . '/assets/dist';
 
-//     // Cache Busting (Gera uma nova versão toda vez que você salvar o arquivo)
-//     $css_ver = file_exists($dist_dir . '/style.min.css') ? filemtime($dist_dir . '/style.min.css') : '1.0.0';
-//     $js_ver  = file_exists($dist_dir . '/scripts.min.js') ? filemtime($dist_dir . '/scripts.min.js') : '1.0.0';
+    // Cache Busting (Gera uma nova versão toda vez que você salvar o arquivo)
+    $css_ver = file_exists($dist_dir . '/style.min.css') ? filemtime($dist_dir . '/style.min.css') : '1.0.0';
+    $js_ver  = file_exists($dist_dir . '/scripts.min.js') ? filemtime($dist_dir . '/scripts.min.js') : '1.0.0';
 
-//     // 2. Carrega o CSS Unificado
-//     wp_enqueue_style('pipe-main-style', $dist_path . '/style.min.css', array(), $css_ver);
+    // 2. Carrega o CSS Unificado
+    wp_enqueue_style('pipe-main-style', $dist_path . '/style.min.css', array(), $css_ver);
 
-//     // 3. Carrega o JS Unificado (jQuery já está lá dentro!)
-//     wp_enqueue_script('pipe-main-script', $dist_path . '/scripts.min.js', array(), $js_ver, true);
-// }
-// add_action('wp_enqueue_scripts', 'pipe_add_scripts');
+    // 3. Carrega o JS Unificado (jQuery já está lá dentro!)
+    wp_enqueue_script('pipe-main-script', $dist_path . '/scripts.min.js', array(), $js_ver, true);
+}
+add_action('wp_enqueue_scripts', 'pipe_add_scripts');
 
 
 /*******************************************************/

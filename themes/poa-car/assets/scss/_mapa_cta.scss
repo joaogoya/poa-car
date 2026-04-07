@@ -1,0 +1,79 @@
+@use 'variables' as *;
+
+/* ==========================================================================
+   SECTION AGENDAMENTO / CONTATO - POA CAR SERVICE
+   ========================================================================== */
+
+.section-agendamento-red {
+    background: linear-gradient(135deg, $primary-red 0%, darken($primary-red, 15%) 100%);
+    position: relative;
+    padding: 80px 0;
+
+    .text-dark-red-title {
+        color: darken($primary-red, 25%);
+    }
+
+    .divider-white {
+        width: 80px;
+        height: 4px;
+        background-color: #fff;
+        margin: 15px auto;
+    }
+
+    /* Container do Mapa */
+    .map-wrapper {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+
+        iframe {
+            filter: grayscale(0.2) contrast(1.1);
+            @media (max-width: 991px) {
+                min-height: 300px !important;
+            }
+        }
+    }
+
+    /* Card NAP - PADRONIZADO COM OS SERVIÇOS */
+    .nap-card-premium {
+        background: rgba(222, 98, 98, 0.75);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-left: 8px solid #fff; 
+        border-radius: 0px;
+
+        @media (max-width: 991px) {
+            border-left: 0;
+            border-top: 8px solid #fff;
+            padding: 2rem !important;
+        }
+    }
+}
+
+/* Utilitários e Componentes Reutilizáveis */
+.text-white-80 {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.btn-whatsapp-section {
+    background-color: #fff;
+    color: $primary-red;
+    font-family: $font-heading;
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 1px;
+
+    &:hover {
+        background-color: $black-bg;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+}

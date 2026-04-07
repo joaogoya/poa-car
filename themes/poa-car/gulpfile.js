@@ -20,28 +20,7 @@ const paths = {
     ],
    
     src: [
-      './assets/scss/_variables.scss', 
-      './assets/scss/_mixin.scss',    
-      './assets/scss/_common.scss',    
-      './assets/scss/_header.scss',
-      './assets/scss/_banner.scss',
-      './assets/scss/_about.scss',
-      './assets/scss/_services.scss',
-      './assets/scss/_cta.scss',
-      './assets/scss/_features.scss',
-      './assets/scss/_video.scss',
-      './assets/scss/_team.scss',
-      './assets/scss/_skill.scss',
-      './assets/scss/_portfolio.scss',
-      './assets/scss/_testimonial.scss',
-      './assets/scss/_blog.scss',
-      './assets/scss/_contact.scss',
-      './assets/scss/_framework.scss',
-      './assets/scss/_counter.scss',
-      './assets/scss/_breadcrumb.scss',
-      './assets/scss/_sidebar.scss',
-      './assets/scss/_faq.scss',
-      './assets/scss/_footer.scss'
+      './assets/scss/style.scss' // O Sass resolve os @use sozinho a partir daqui
     ],
     watch: './assets/scss/**/*.scss',
     dest: './assets/dist/'
@@ -66,8 +45,7 @@ scripts: {
       'assets/js/jquery.meanmenu*.js',
 
       // 4. LÓGICA DO TEMA: Seus arquivos finais
-      'assets/js/main.js',
-      'assets/js/template_sctipt.js', 
+      'assets/js/main.js', 
 
       // 5. EXCLUSÕES INTELIGENTES
       '!assets/js/vendor/jquery-migrate*', 
@@ -81,10 +59,10 @@ function buildCss() {
   // O Gulp vai ler todos os arquivos da lista na ordem
   return gulp.src([...paths.styles.vendors, ...paths.styles.src])
     .pipe(sourcemaps.init())
-    .pipe(concat('style.min.css')) // Junta tudo primeiro (desencapsula)
     .pipe(sass({
         quietDeps: true // Silencia avisos de @import se houver algum nos vendors
     }).on('error', sass.logError))
+    .pipe(concat('style.min.css')) // Concatena DEPOIS de compilar (CSS com CSS)
     .pipe(postcss([autoprefixer()]))
     .pipe(cleanCSS({ level: 2, compatibility: 'ie8' }))
     .pipe(sourcemaps.write('./'))

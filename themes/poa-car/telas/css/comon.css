@@ -1,24 +1,21 @@
-/* --- Atualizações Globais e Variáveis --- */
-:root {
-    --primary-red: #fd0000;
-    --dark-red: #cc0000; /* Vermelho um pouco mais escuro para o hover */
-    --light-gray: #e2e4e3;
-    --black-bg: #0a0a0a;
-}
+/* // Importa as definições globais (Caminho relativo para a pasta assets/scss) */
+@use '../../assets/scss/variables' as *;
 
-/* Aplicando as novas fontes */
-h1, h2, h3, .btn-hero {
-    font-family: 'Oswald', sans-serif;
-}
+/* --- Configurações de Base --- */
 
-body, p {
-    font-family: 'Roboto', sans-serif;
-}
-
-.text-red { color: var(--primary-red); }
-
-
-/* Animação suave para o scroll */
 html {
     scroll-behavior: smooth;
 }
+
+body, p {
+    font-family: $font-main;
+    color: $black-bg;
+}
+
+/* Tipografia de Impacto */
+h1, h2, h3, .btn-hero {
+    font-family: $font-heading;
+    text-transform: uppercase;
+}
+
+.text-red { color: $primary-red; }
